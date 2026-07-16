@@ -1,0 +1,37 @@
+1. Billing & Transaction Routes (Tests the BillingAgent)
+These queries verify that your router strips string data safely and accurately handles complaints parsing:
+
+"Can you help me unlock my debit card?"
+
+"Why was I charged twice for transaction TXN_001?"
+
+"My payment failed but money was deducted from my account."
+
+2. Informational & Policy Queries (Tests the FAQAgent)
+These queries test whether the vector lookup system pulls unstructured data or documents cleanly from your storage layer:
+
+"What is the standard processing time for a cross-border transaction refund?"
+
+"How do I reset my account credentials safely?"
+
+"What are the bank's operational service hours for support?"
+
+3. System Logs & Maintenance Queries (Tests the TechnicalAgent)
+These queries verify that the hardcoded technical fallback blocks trigger smoothly:
+
+"The interface is running slow, how do I clear my session cache?"
+
+"Wipe system local session caches and verify routing tables."
+
+"Check if my client access token is still active."
+
+4. Edge Cases & Boundary Conditions (Tests Router Fallbacks)
+These queries test how the AgentRouter handles queries that don't clearly fall into a single bucket, verifying that your clean_confidence float parsing won't crash:
+
+"Hello, I just opened the app and need general guidance."
+
+"Can you explain the difference between a credit card and a debit card?"
+
+"What is the weather outside today?" (Tests the final general routing fallback option).
+
+Which specific agent module do you want to run deep-dive verification on next?
